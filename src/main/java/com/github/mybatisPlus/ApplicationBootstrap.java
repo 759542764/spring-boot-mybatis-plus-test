@@ -1,9 +1,9 @@
-package com.github.kuhn_he;
+package com.github.mybatisPlus;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-import com.github.kuhn_he.saas.ds.annotation.EnableDynamicRouteDataSource;
+import com.github.mybatisPlus.annotation.EnableDynamicRouteDataSource;
 
 
 @SpringBootApplication

@@ -1,0 +1,45 @@
+server:
+  port: 8080
+
+spring:
+  autoconfigure:
+    exclude: com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure
+  datasource:
+    dynamic:
+      primary: master
+      datasource:
+        master:
+          url: jdbc:mysql://192.168.48.11:3306/saas?characterEncoding=utf-8
+          username: root
+          password: 123456
+          driver-class-name: com.mysql.cj.jdbc.Driver
+        slaver1:
+          url: jdbc:mysql://192.168.48.11:3306/saas?characterEncoding=utf-8
+          username: root
+          password: 123456
+          driver-class-name: com.mysql.cj.jdbc.Driver
+        slaver2:
+          url: jdbc:mysql://192.168.48.11:3306/saas?characterEncoding=utf-8
+          username: root
+          password: 123456
+          driver-class-name: com.mysql.cj.jdbc.Driver
+      druid:
+        filters: stat
+        initial-size: 1
+        min-idle: 1
+        max-active: 20
+        max-wait: 60000
+        time-between-eviction-runs-millis: 60000
+        min-evictable-idle-time-millis: 300000
+        validation-query: SELECT 'x'
+        test-while-idle: true
+        test-on-borrow: false
+        test-on-return: false
+        pool-prepared-statements: true
+        max-pool-prepared-statement-per-connection-size: 50
+
+
+logging:
+  level:
+    com.github.mybatisPlus.mapper: debug
+

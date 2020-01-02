@@ -1,4 +1,4 @@
-package com.github.kuhn_he.saas.ds;
+package com.github.mybatisPlus.config;
 
 import org.aopalliance.aop.Advice;
 import org.springframework.aop.Pointcut;
@@ -9,15 +9,12 @@ import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.BeanFactory;
 import org.springframework.beans.factory.BeanFactoryAware;
 
-import com.github.kuhn_he.saas.ds.annotation.SAAS;
+import com.github.mybatisPlus.annotation.SAAS;
 
 import lombok.NonNull;
 
 /**
  * 动态数据源AOP织入
- *
- * @author TaoYu
- * @since 1.2.0
  */
 public class DynamicDataSourcePlusAnnotationAdvisor extends AbstractPointcutAdvisor implements BeanFactoryAware {
 
