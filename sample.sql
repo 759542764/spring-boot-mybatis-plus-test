@@ -2,7 +2,8 @@
 SQLyog Enterprise v12.09 (64 bit)
 MySQL - 5.7.24-log : Database - sample
 *********************************************************************
-*/
+*/
+
 
 /*!40101 SET NAMES utf8 */;
 
@@ -22,12 +23,13 @@ DROP TABLE IF EXISTS `t_account`;
 
 CREATE TABLE `t_account` (
   `name` varchar(50) NOT NULL,
-  `age` int(10) NOT NULL
+  `age` int(10) NOT NULL,
+  `image_url` json
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 /*Data for the table `t_account` */
 
-insert  into `t_account`(`name`,`age`) values ('saas',21);
+insert  into `t_account`(`name`, `age`, `image_url`) values ('saas', 21, ["sdf", "wqer"]);
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;

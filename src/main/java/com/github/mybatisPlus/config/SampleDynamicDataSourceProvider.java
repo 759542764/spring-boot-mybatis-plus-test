@@ -1,16 +1,13 @@
-package com.github.mybatisPlus.provider;
-
-import javax.sql.DataSource;
-
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
+package com.github.mybatisPlus.config;
 
 import com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DataSourceProperty;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.github.mybatisPlus.entity.TDatasources;
 import com.github.mybatisPlus.mapper.TDatasourcesMapper;
-import com.github.mybatisPlus.config.DynamicDataSourcePlusCreator;
-import com.github.mybatisPlus.config.DynamicDataSourcePlusProvider;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+import javax.sql.DataSource;
 
 @Component
 public class SampleDynamicDataSourceProvider implements DynamicDataSourcePlusProvider {
